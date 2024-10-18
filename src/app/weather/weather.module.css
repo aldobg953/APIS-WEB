@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Reddit+Mono:wght@200..900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+.container {
+    font-family: "Reddit Mono", monospace;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+/* #region header */
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.backHome{
+    font-size: 1.2rem;
+    transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+}
+
+.backHome:hover{
+    color: #f75151;
+    cursor: pointer;
+    translate: 15px;
+}
+
+.backHome:active{
+    translate: 0px;
+}
+
+.title {
+    font-size: 4rem;
+    margin: 1rem 0rem 1rem 0rem;
+    text-align: center;
+}
+/* #endregion */
+
+
+
+/* #region weatherForm */
+.weatherForm {
+    height: 4rem;
+    margin: 1rem 0;
+    min-width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* #region cityInput */
+.cityInput {
+    height: 100%;
+    font-family: "Reddit Mono", monospace;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin-right: .5rem;
+    width: 64%;
+}
+
+.cityInput:focus {
+    outline: none;
+    border-color: #f75151;
+}
+
+/* #endregion */
+
+
+/* #region citySubmit button */
+.citySubmit {
+    height: 100%;
+    font-size: 1.2rem;
+    font-family: "Reddit Mono", monospace;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    width: 34%;
+    background-color: #ffffff35;
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.citySubmit:hover {
+    background-color: #ff000035;
+    border-color: #f75151;
+    transform: scale(1.05);
+}
+
+.citySubmit:active {
+    transform: scale(1);
+}
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region card */
+.card {
+    flex-direction: column;
+    margin: 1rem 0;
+    padding: 2rem;
+    text-align: left;
+    font-size: 1.5rem;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    transition: transform 0.2s, color 0.2s, border-color 0.2s;
+    min-width: 30vw;
+}
+
+.card:hover {
+    color: #f75151;
+    border-color: #f75151;
+}
+
+.card:hover .errorDisplay {
+    color: #ffffff;
+}
+
+.cityDisplay{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tempDisplay{
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+.humidityDisplay{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.descDisplay{
+    font-style: italic;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.weatherEmoji{
+    font-size: 5rem;
+    margin: 0;
+}
+
+.errorDisplay{
+    color: #f75151;
+    font-size: 2.5rem;
+}
+
+/* #endregion */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
