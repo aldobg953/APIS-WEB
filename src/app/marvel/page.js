@@ -95,7 +95,7 @@ export default function MarvelPage() {
             </div>
 
             <footer className={styles.footer}>
-                <p>by Aldo Barrera</p>
+            <a href="https://matias.me/nsfw/">by Aldo Barrera</a>
             </footer>
         </div>
     );
