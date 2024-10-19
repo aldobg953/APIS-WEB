@@ -92,8 +92,9 @@
   }
 
   .loading > lord-icon{
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 2rem;
   }
 
 .error {
@@ -114,9 +115,9 @@
   }
 
   .footer {
-    bottom: 0;
     width: 100%;
     color: white;
-    padding: 20px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     text-align: center;
-  }
+}

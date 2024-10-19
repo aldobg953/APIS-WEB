@@ -30,7 +30,7 @@ export default function MarvelPage() {
 
             try {
                 const response = await axios.get(
-                    `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=2000`
+                    `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=100`
                 );
                 setCharacters(response.data.data.results);
                 setLoading(false);
@@ -50,7 +50,7 @@ export default function MarvelPage() {
                 <lord-icon
                     src="https://cdn.lordicon.com/lqxfrxad.json"
                     trigger="loop"
-                    state="loop-scale"
+                    state="loop-expand"
                     colors="primary:#ffffff"
                 >
                 </lord-icon>

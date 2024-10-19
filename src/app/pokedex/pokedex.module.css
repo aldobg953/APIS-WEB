@@ -10,6 +10,7 @@
 
 /* #region header */
 .header {
+    position: fixed;
     width: 100vw;
     background-color: #101010de;
     backdrop-filter: blur(10px);
@@ -47,7 +48,8 @@
 /* #region search bar */
 .searchContainer {
     height: 4rem;
-    margin: 1rem 0;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
     min-width: 30vw;
     display: flex;
     align-items: center;
