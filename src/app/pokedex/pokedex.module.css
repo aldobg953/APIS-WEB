@@ -1,0 +1,185 @@
+.container {
+    font-family: "Reddit Mono", monospace;
+    padding: 0 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+/* #region header */
+.header {
+    width: 100vw;
+    background-color: #101010de;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10rem 1fr 10rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.backHome {
+    font-size: 1.2rem;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
+}
+
+.backHome:hover {
+    color: #f75151;
+    cursor: pointer;
+    translate: 15px;
+}
+
+.backHome:active {
+    translate: 0px;
+}
+
+.title {
+    font-size: 4rem;
+    margin: 1rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+/* #endregion */
+
+/* #region search bar */
+.searchContainer {
+    height: 4rem;
+    margin: 1rem 0;
+    min-width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* #region cityInput */
+.searchInput {
+    height: 100%;
+    font-family: "Reddit Mono", monospace;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin-right: .5rem;
+    width: 64%;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #f75151;
+}
+
+/* #endregion */
+
+
+/* #region citySubmit button */
+.searchButton {
+    height: 100%;
+    font-size: 1.2rem;
+    font-family: "Reddit Mono", monospace;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    width: 34%;
+    background-color: #ffffff35;
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: #ff000035;
+    border-color: #f75151;
+    transform: scale(1.05);
+}
+
+.searchButton:active {
+    transform: scale(1);
+}
+
+.searchButton:disabled {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    transform: scale(1);
+    cursor: not-allowed;
+}
+
+/* #endregion */
+/* #endregion */
+
+.pokemonGrid {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.pokemonItem {
+    width: 18rem;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(.47, 1.64, .41, .8);
+    border: #ffffff 1px solid;
+}
+
+.pokemonItem:hover {
+    transform: scale(1.1);
+    z-index: 5;
+    border-color: #f75151;
+    box-shadow: 0px 0px 80px rgb(0, 0, 0);
+}
+
+.pokemonName {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.pokemonImage {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.pokemonDetails {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    line-height: 1.5;
+}
+
+.toggleButton {
+    padding: .5rem;
+    font-size: 1.2rem;
+    font-family: "Reddit Mono", monospace;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #ffffff35;
+    transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.toggleButton:hover {
+    background-color: #ff000035;
+    border-color: #f75151;
+    transform: scale(1.05);
+}
+
+.footer {
+    width: 100%;
+    color: white;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}

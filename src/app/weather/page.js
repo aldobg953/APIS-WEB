@@ -1,12 +1,24 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef, useEffect, useState } from 'react';
 import styles from "./weather.module.css";
 
 export default function Weather() {
+  const [loading, setLoading] = useState(false);
   const weatherFormRef = useRef(null);
   const cityInputRef = useRef(null);
   const cardRef = useRef(null)
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://cdn.lordicon.com/lordicon.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+        document.body.removeChild(script);
+    };
+}, []);
 
   useEffect(() => {
     const weatherForm = weatherFormRef.current;
@@ -35,14 +47,18 @@ export default function Weather() {
     }
 
     async function getWeather(city) {
+      setLoading(true);
+      
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
       const response = await fetch(apiUrl);
 
       if (!response.ok) {
+        setLoading(false);
         throw new Error("Failed to fetch weather data");
       }
 
+      setLoading(false);
       return await response.json();
     }
 
@@ -127,7 +143,13 @@ export default function Weather() {
       
       <form ref={weatherFormRef} className={styles.weatherForm}>
         <input ref={cityInputRef} type="text" className={styles.cityInput} placeholder="Enter city" />
-        <button type="submit" className={styles.citySubmit}>Get weather</button>
+        <button type="submit" className={styles.citySubmit}>{loading ? <lord-icon
+                    src="https://cdn.lordicon.com/gkryirhd.json"
+                    trigger="loop"
+                    state="loop-snake-alt"
+                    colors="primary:#ffffff"
+                >
+                </lord-icon> : "Get weather"}</button>
       </form>
       
       <div ref={cardRef} className={styles.card} style={{ display: "none" }}>

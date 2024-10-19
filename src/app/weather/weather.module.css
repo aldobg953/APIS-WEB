@@ -11,12 +11,17 @@
 }
 
 /* #region header */
+
 .header {
+    width: 100vw;
+    background-color: #101010de;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    text-align: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 10rem 1fr 10rem;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0;
 }
 
 .backHome{
@@ -159,10 +164,10 @@
 /* #endregion */
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

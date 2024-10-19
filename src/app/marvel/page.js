@@ -30,7 +30,7 @@ export default function MarvelPage() {
 
             try {
                 const response = await axios.get(
-                    `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=20`
+                    `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=2000`
                 );
                 setCharacters(response.data.data.results);
                 setLoading(false);

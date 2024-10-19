@@ -11,17 +11,18 @@
 .header {
     position: fixed;
     width: 100vw;
-    background-color: #000000;
+    background-color: #101010de;
+    backdrop-filter: blur(10px);
     z-index: 100;
     text-align: center;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 10rem 1fr 10rem;
     align-items: center;
     justify-content: center;
 }
 
 .backHome{
-    margin: 1rem 0;
+    margin: 1rem 2rem;
     font-size: 1.2rem;
     transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
 }
