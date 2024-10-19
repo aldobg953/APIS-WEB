@@ -185,3 +185,8 @@
     padding-bottom: 5rem;
     text-align: center;
 }
+
+.footer a:hover{
+    color: #f75151;
+    text-decoration: none;
+}
